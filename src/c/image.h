@@ -8,6 +8,7 @@
 
 /**
  * Integer grayscale image
+ * 
  */
 typedef struct
 {
@@ -18,6 +19,7 @@ typedef struct
 
 /**
  * 64-bit floating point greyscale image
+ * 
  */
 typedef struct
 {
@@ -36,6 +38,7 @@ typedef struct
  * @return a IntGrey struct.
  *
  * @note Assumed width and height make sense.
+ * 
  */
 inline IntGrey *makeIG(unsigned int width, unsigned int height)
 {
@@ -61,6 +64,7 @@ inline IntGrey *makeIG(unsigned int width, unsigned int height)
  * @return an DblGrey struct.
  *
  * @note Assumed width and height make sense.
+ * 
  */
 inline DblGrey *makeDG(unsigned int width, unsigned int height)
 {
