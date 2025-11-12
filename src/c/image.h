@@ -40,7 +40,7 @@ typedef struct
  * @note Assumed width and height make sense.
  * 
  */
-inline IntGrey *makeIG(unsigned int width, unsigned int height)
+static inline IntGrey *makeIG(unsigned int width, unsigned int height)
 {
     IntGrey *img = (IntGrey *)malloc(sizeof(IntGrey));
     img->width = width;
@@ -66,7 +66,7 @@ inline IntGrey *makeIG(unsigned int width, unsigned int height)
  * @note Assumed width and height make sense.
  * 
  */
-inline DblGrey *makeDG(unsigned int width, unsigned int height)
+static inline DblGrey *makeDG(unsigned int width, unsigned int height)
 {
     DblGrey *img = (DblGrey *)malloc(sizeof(DblGrey));
     img->width = width;

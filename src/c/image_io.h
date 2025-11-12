@@ -3,6 +3,7 @@
 
 #include "image.h"
 #include <string.h>
+#include <stdio.h>
 
 /**
  * @brief Displays the IntGrey to the standard output.
@@ -10,7 +11,7 @@
  * @param img the IntGrey structure to display.
  * 
  */
-inline void displayIG(IntGrey img)
+static inline void displayIG(IntGrey img)
 {
     for (unsigned int i = 0; i < img.height; i++)
     {
@@ -32,7 +33,7 @@ inline void displayIG(IntGrey img)
  * @note I don't think we need to use this, for testing purposes only.
  * 
  */
-inline void inputIG(IntGrey img, char *message)
+static inline void inputIG(IntGrey img, char *message)
 {
     const char *msg = (message == NULL) ? "" : message;
 
@@ -52,7 +53,7 @@ inline void inputIG(IntGrey img, char *message)
  * @param img the IntGrey structure to display.
  * 
  */
-inline void displayDG(DblGrey img)
+static inline void displayDG(DblGrey img)
 {
     {
         for (unsigned int i = 0; i < img.height; i++)
@@ -76,7 +77,7 @@ inline void displayDG(DblGrey img)
  * @note I don't think we need to use this, for testing purposes only.
  * 
  */
-inline void inputDG(DblGrey img, char *message)
+static inline void inputDG(DblGrey img, char *message)
 {
     const char *msg = (message == NULL) ? "" : message;
 
