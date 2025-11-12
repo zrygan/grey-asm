@@ -1,7 +1,6 @@
 #ifndef RNG_H
 #define RNG_H
 
-#include <time.h>
 #include <stdlib.h>
 
 inline unsigned int randint()
