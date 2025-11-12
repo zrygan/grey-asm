@@ -8,7 +8,7 @@
 #define MAX_W 1000
 
 /**
- * Image struct
+ * Integer grayscale image
  */
 typedef struct
 {
@@ -17,6 +17,9 @@ typedef struct
     unsigned int height;   /** Height of the matrix             */
 } IntGrey;
 
+/**
+ * 64-bit floating point greyscale image
+ */
 typedef struct
 {
     double **matrix;     /** A 2D matrix of double */
@@ -49,7 +52,7 @@ inline IntGrey *makeIG(unsigned int width, unsigned int height)
 }
 
 /**
- * @brief This created an 64 bit floating-point greyscale image (2D-matrix of doubles) given a
+ * @brief This created an 64-bit floating-point greyscale image (2D-matrix of doubles) given a
  * specific width and height.
  *
  *
