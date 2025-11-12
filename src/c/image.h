@@ -12,9 +12,9 @@
  */
 typedef struct
 {
-    unsigned int **matrix; /** A 2D matrix of unsigned integers */
-    unsigned int width;    /** Width of the matrix              */
-    unsigned int height;   /** Height of the matrix             */
+    unsigned int **matrix; /** A 2D matrix of unsigned integers. */
+    unsigned int width;    /** Width of the matrix.              */
+    unsigned int height;   /** Height of the matrix.             */
 } IntGrey;
 
 /**
@@ -23,9 +23,9 @@ typedef struct
  */
 typedef struct
 {
-    double **matrix;     /** A 2D matrix of double */
-    unsigned int width;  /** Width of the matrix   */
-    unsigned int height; /** Height of the matrix  */
+    double **matrix;     /** A 2D matrix of double. */
+    unsigned int width;  /** Width of the matrix.   */
+    unsigned int height; /** Height of the matrix.  */
 } DblGrey;
 
 /**

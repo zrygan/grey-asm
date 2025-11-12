@@ -4,7 +4,7 @@
 #include <stdlib.h>
 
 /**
- * @brief Generates a random integer within the range of [0,255]
+ * @brief Generates a random integer within the range of [0,255].
  * 
  */
 inline unsigned int randint()
@@ -14,7 +14,7 @@ inline unsigned int randint()
 
 /**
  * @brief Generates a random double-precision floating point number within the range of
- * [0.00000, 0.99999]
+ * [0.00000, 0.99999].
  * 
  */
 inline double randdbl()
