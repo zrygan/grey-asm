@@ -1,7 +1,6 @@
 #ifndef IMAGE_H
 #define IMAGE_H
 
-#include <stdio.h>
 #include <stdlib.h>
 
 #define MAX_H 1000
@@ -31,8 +30,8 @@ typedef struct
  * @brief This creates an integer greyscale image (2D-matrix of unsigned integers) given a specific
  * width and height.
  *
- * @par width: an unsigned integer that denotes the number of columns.
- * @par height: an unsigned integer that denotes the number of rows.
+ * @param width: an unsigned integer that denotes the number of columns.
+ * @param height: an unsigned integer that denotes the number of rows.
  *
  * @return a IntGrey struct.
  *
@@ -56,8 +55,8 @@ inline IntGrey *makeIG(unsigned int width, unsigned int height)
  * specific width and height.
  *
  *
- * @par width: an unsigned integer that denotes the number of columns.
- * @par height: an unsigned integer that denotes the number of rows.
+ * @param width: an unsigned integer that denotes the number of columns.
+ * @param height: an unsigned integer that denotes the number of rows.
  *
  * @return an DblGrey struct.
  *
