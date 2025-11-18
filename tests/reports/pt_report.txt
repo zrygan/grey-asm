@@ -1,0 +1,5 @@
+===== RESULTS =====
+Test 0 (10x10):         ASM = 0.00000010 sec | C = 0.00000104 sec | Speedup = 10.45x
+Test 1 (100x100):       ASM = 0.00000678 sec | C = 0.00005293 sec | Speedup = 7.81x
+Test 2 (1000x1000):     ASM = 0.00105136 sec | C = 0.00648075 sec | Speedup = 6.16x
+Test 3 (10000x10000):   ASM = 0.07818094 sec | C = 0.43430132 sec | Speedup = 5.56x

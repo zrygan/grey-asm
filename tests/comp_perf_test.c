@@ -13,6 +13,8 @@ extern void imgCvtGrayDoubleToInt(const double *src, uint8_t *dst, size_t n);
 
 // ===== PERFORMANCE TESTING ======================================
 // Comprehensive performance testing.
+// 
+// The result of the test is stored in test/reports/
 // ================================================================
 
 #define REPS  20 // n. of times the performance test repeats
