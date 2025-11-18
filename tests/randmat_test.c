@@ -1,9 +1,9 @@
 #include <time.h>
 #include <assert.h>
-#include "../c/image.h"
-#include "../c/image_io.h"
-#include "../c/rng.h"
-#include "../c/convert.h"
+#include "../src/c/image.h"
+#include "../src/c/image_io.h"
+#include "../src/c/rng.h"
+#include "../src/c/convert.h"
 
 #define ROWS 3
 #define COLS 4

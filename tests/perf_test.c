@@ -1,9 +1,9 @@
 #include <stdio.h>
 #include <time.h>
-#include "../c/image.h"
-#include "../c/image_io.h"
-#include "../c/rng.h"
-#include "../c/perf.h"
+#include "../src/c/image.h"
+#include "../src/c/image_io.h"
+#include "../src/c/rng.h"
+#include "../src/c/perf.h"
 
 #define COLS 1000
 #define ROWS 1000
