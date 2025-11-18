@@ -46,7 +46,7 @@ static inline IntGrey *makeIG(unsigned int width, unsigned int height)
     img->width = width;
     img->height = height;
 
-    img->matrix = malloc(sizeof(unsigned int) * height);
+    img->matrix = malloc(sizeof(unsigned int*) * height);
     for (int i = 0; i < height; i++)
         img->matrix[i] = malloc(sizeof(unsigned int) * width);
 
@@ -72,7 +72,7 @@ static inline DblGrey *makeDG(unsigned int width, unsigned int height)
     img->width = width;
     img->height = height;
 
-    img->matrix = malloc(sizeof(double) * height);
+    img->matrix = malloc(sizeof(double*) * height);
     for (int i = 0; i < height; i++)
         img->matrix[i] = malloc(sizeof(double) * width);
 
