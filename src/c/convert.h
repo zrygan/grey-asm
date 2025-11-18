@@ -40,10 +40,12 @@ static inline double itod(unsigned int i)
  * @param d The greyscale double to convert (expected range: 0.0 to 1.0)
  * 
  * @return The unsigned integer equivalent of the greyscale value {d}
+ * 
+ * @note Uses round-to-nearest, ties-to-even (banker's rounding)
  */
 static inline unsigned int dtoi(double d)
 {
-    return (unsigned int)lround(d * 255.0); 
+    return (unsigned int)lrint(d * 255.0); 
 }
 
 /**
