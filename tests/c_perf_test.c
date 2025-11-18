@@ -9,6 +9,11 @@
 #define ROWS 1000
 #define NTEST 1000
 
+// ===== PERFORMANCE TESTING ======================================
+// This code tests the C file without the ASM file.
+// See `comp_perf_test.c` for the comprehensive performance testing.
+// ================================================================
+
 int main()
 {
     srand(time(NULL));
