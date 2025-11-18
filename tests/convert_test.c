@@ -39,7 +39,7 @@ void test_imgCvtDoubleToInt()
         {140, 166, 191, 84},
         {217, 242, 38, 84}};
 
-    IntGrey *res = imgCvtDoubleToInt(*data);
+    IntGrey *res = c_imgCvtGrayDoubleToInt(*data);
 
     displayIG(*res);
 
