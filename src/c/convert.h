@@ -56,7 +56,7 @@ static inline unsigned int dtoi(double d)
  * @return an IntGrey structure.
  *
  */
-static inline IntGrey *imgCvtDoubleToInt(DblGrey img)
+static inline IntGrey *c_imgCvtGrayDoubleToInt(DblGrey img)
 {
     IntGrey *ret = makeIG(img.width, img.height);
     
