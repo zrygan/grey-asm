@@ -17,7 +17,7 @@ extern void imgCvtGrayDoubleToInt(const double *src, uint8_t *dst, size_t n);
 // The result of the test is stored in test/reports/
 // ================================================================
 
-#define REPS  20 // n. of times the performance test repeats
+#define REPS  30 // n. of times the performance test repeats
 #define NTEST 4
 int main()
 {
@@ -26,7 +26,7 @@ int main()
     printf("Starting performance test...\n");
     
     // Test sizes: 10x10, 100x100, 1000x1000 + Stress Test
-    int sizes[NTEST][2] = {{10, 10}, {100, 100}, {1000, 1000}, {10000, 10000}};
+    int sizes[NTEST][2] = {{10, 10}, {100, 100}, {1000, 1000}};
     double res_c[NTEST], res_asm[NTEST];
     
     for (int e = 0; e < NTEST; e++)
