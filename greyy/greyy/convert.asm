@@ -1,5 +1,4 @@
-﻿; converter_win64_round.asm
-; NASM (Intel) syntax, x86-64, Windows x64 calling convention
+﻿; convert.asm
 ; Exports: imgCvtGrayDoubleToInt(const double *src, uint8_t *dst, size_t n)
 
 section .data
@@ -21,7 +20,7 @@ imgCvtGrayDoubleToInt:
     movsd xmm0, qword [rcx]           ; load double from src
     mulsd xmm0, qword [rel const_255] ; multiply by 255.0
     addsd xmm0, qword [rel const_05]  ; add 0.5 for rounding
-    cvttsd2si eax, xmm0               ; truncate → effectively round to nearest
+    cvttsd2si eax, xmm0               ; round off
 
     ; clamp eax to [0,255]
     cmp eax, 0

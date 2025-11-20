@@ -17,7 +17,7 @@
 //// The result of the test is stored in test/reports/
 //// ================================================================
 //
-//#define REPS  20 // n. of times the performance test repeats
+//#define REPS  30 // n. of times the performance test repeats
 //#define NTEST 4
 //int main()
 //{
