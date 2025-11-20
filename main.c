@@ -9,12 +9,6 @@
 
 extern void imgCvtGrayDoubleToInt(const double* src, uint8_t* dst, size_t n);
 
-void printDetails()
-{
-    printf("===== DETAILS =====\n");
-    printf("time: %10.8lf\n", diff);
-}
-
 int main()
 {
     srand(time(NULL));
@@ -27,8 +21,8 @@ int main()
     randpopDG(dbImg);
     
     // DISPLAY FOR DEBUGGING
-    // printf("\nDEBUGGING: DOUBLE GREYSCALE IMAGE\n")
-    // displayDG(*dbImg);
+    printf("\nDEBUGGING: DOUBLE GREYSCALE IMAGE\n");
+    displayDG(*dbImg);
     
     // Flatten the 2D matrix and prepare for assembly call
     flattenDG flat = makeFlat(ROWS, COLS, *dbImg);
@@ -40,16 +34,8 @@ int main()
 
     endTime(&stime, &etime, &freq, &diff);
     
-    // DISPLAY FOR DEBUGGING
-    // printf("\nDEBUGGING: INTEGER GREYSCALE IMAGE (ASM)\n");
-    // for (int i = 0; i < ROWS; i++) {
-    //     for (int j = 0; j < COLS; j++) {
-    //         printf("%3d ", flat.dst[i * COLS + j]);
-    //     }
-    //     printf("\n");
-    // }
-    
-    printDetails();
+    printf("\nDEBUGGING: INTEGER GREYSCALE IMAGE (ASM)\n");
+    displayFlat(flat);
     
     // Cleanup
     free(flat.matrix);

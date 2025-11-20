@@ -45,8 +45,16 @@ static inline flattenDG makeFlat(int rows, int cols, DblGrey img)
     result.n = n;
     result.dst = dst;
     result.matrix = src;
-    
+
     return result;
+}
+
+static inline void displayFlat(flattenDG fdg)
+{
+    for (int i = 0; i < fdg.n; i++)
+    {
+        printf("%3d ", fdg.dst[i]);
+    }
 }
 
 #endif // FLATTEN_H
