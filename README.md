@@ -21,6 +21,9 @@ And we want to implement the procedure $\text{conv}(M_d)$ which takes in the mat
 Furthermore, implementing the procedure $\text{conv}$ in C17 and ASM gives us an idea on the performance difference between C17 and ASM.
 
 ---
+## Video (With Explanation)
+https://youtu.be/7IEkxv2Ej8M
+--
 
 ## Boilerplate
 
