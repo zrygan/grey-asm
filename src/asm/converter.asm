@@ -4,6 +4,7 @@
 section .data
 align 8
 const_255: dq 255.0
+const_05:  dq 0.5        ; used for rounding
 
 section .text
 global imgCvtGrayDoubleToInt
@@ -16,12 +17,10 @@ imgCvtGrayDoubleToInt:
     je .done
 
 .loop:
-    ; load double from [rcx]
-    movsd xmm0, qword [rcx]
-    ; multiply by 255.0
-    mulsd xmm0, qword [rel const_255]
-    ; convert scalar double in xmm0 to signed 32-bit int in eax
-    cvtsd2si eax, xmm0
+    movsd xmm0, qword [rcx]           ; load double from src
+    mulsd xmm0, qword [rel const_255] ; multiply by 255.0
+    addsd xmm0, qword [rel const_05]  ; add 0.5 for rounding
+    cvttsd2si eax, xmm0               ; round off
 
     ; clamp eax to [0,255]
     cmp eax, 0
@@ -35,14 +34,14 @@ imgCvtGrayDoubleToInt:
     mov al, 0
 
 .store_ok:
-    ; AL already contains the correct byte
+    ; AL already contains correct byte
     ; fallthrough to store
 
 .store_byte:
-    mov byte [rdx], al   ; store to destination
-    add rcx, 8           ; advance src pointer (double = 8 bytes)
-    inc rdx              ; advance dst pointer (uint8_t = 1 byte)
-    dec r8               ; decrement counter
+    mov byte [rdx], al
+    add rcx, 8       ; advance src pointer
+    inc rdx          ; advance dst pointer
+    dec r8
     jne .loop
 
 .done:
