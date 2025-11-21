@@ -1,6 +1,7 @@
 # C v. ASM: Greyscale Image Conversion
 
-By: Lance Jacob Ferrer, Zhean Robby Ganituen 
+**By**: Lance Jacob Ferrer, Zhean Robby Ganituen <br>
+**Video demo**: https://youtu.be/7IEkxv2Ej8M
 
 The base source code for the project are in the `src/` directory, while the Visual Studio solution
 file is in the `vs/` directory.
@@ -21,9 +22,6 @@ And we want to implement the procedure $\text{conv}(M_d)$ which takes in the mat
 Furthermore, implementing the procedure $\text{conv}$ in C17 and ASM gives us an idea on the performance difference between C17 and ASM.
 
 ---
-## Video (With Explanation)
-https://youtu.be/7IEkxv2Ej8M
---
 
 ## Boilerplate
 
